@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Title{% endblock title %}</title>
+    <link href="{% static 'styling/style.css' %}" rel="stylesheet"/>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'homepage' %}">HOME</a></li>
+                <li><a href="{% url 'experiencepage' %}">MY EXPERIENCE</a></li>
+            </ul>
+        </nav>
+    </header>
+        <br><br><br>
+            <center><h1>     </h1></center>
+            {% block content %}
+
+            {% endblock content %}
+    <br><br>
+    <footer>
+        <i>Designed by vbello tech</i><br>
+        <i>Contact us @ +234 903 826 4724</i><br>
+        <i>Shop E-11 Fayose Market, Beside Phenrose Filling Station</i>
+    </footer>
+
+</body>
+</html>
